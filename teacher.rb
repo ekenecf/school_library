@@ -1,15 +1,12 @@
 require_relative './person'
 
 class Teacher < Person
-  def initialize(age, specialization, name = 'unknown', parent_permission: true)
+  def initialize(specialization)
     @specialization = specialization
-    super(name, age, parent_permission: parent_permission)
+    super(age, name, parent_permission: parent_permission)
   end
 
   def can_use_services?
     true
   end
 end
-
-ekene = Teacher.new(16, 'maths', 'john')
-puts ekene

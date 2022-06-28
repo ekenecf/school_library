@@ -21,6 +21,3 @@ class Person
     of_age? || @parent_permission
   end
 end
-
-# ekene = Person.new(16, 'john')
-# puts ekene.age
