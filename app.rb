@@ -122,10 +122,10 @@ class App
     puts "'Has parent permission? [Y/N]: '"
     permission = gets.chomp
     if permission == 'N'
-      student = Student.new(age, name, permission: false)
+      student = Student.new(age, name, parent_permission: false)
       @person.push(student)
     else
-      student = Student.new(age, name, permission: true)
+      student = Student.new(age, name, parent_permission: true)
     end
     @person.push(student)
   end
