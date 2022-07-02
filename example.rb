@@ -1,11 +1,13 @@
 require_relative './trimmer_decorator'
 require_relative './person'
 require_relative './capitalize_decorator'
+require_relative 'base_decorator'
 
 person = Person.new(22, 'maximilianus')
-p person.correct_name
+person.correct_name
 capitalizedperson = CapitalizeDecorator.new(person)
-p capitalizedperson.correct_name
+capitalizedperson.correct_name
 capitalizedtrimmedperson = TrimmerDecorator.new(person)
-p capitalizedtrimmedperson
-p capitalizedtrimmedperson.correct_name
+capitalizedtrimmedperson.correct_name
+base = BaseDecorator.new(person)
+base.correct_name
