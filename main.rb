@@ -4,4 +4,4 @@ def main
   newapp = App.new
   newapp.menu_run
 end
-p main
+main

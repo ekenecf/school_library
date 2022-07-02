@@ -21,10 +21,11 @@ class App
     puts '5 - Create a rental'
     puts '6 - List all rentals for a given person id'
     puts "7 - Exit\n\n"
+    gets.chomp
   end
 
   def menu_run
-    choice = menu
+    choice = menu.to_s
     case choice
     when '1'
       list_all_books
@@ -36,8 +37,10 @@ class App
       create_book
     when '5'
       create_rental
+    when '6'
+      list_all_rentals_for_a_given_person_id
     else
-      puts 'Thanks for using this App...'
+      puts 'Thank you for using this App'
       exit
     end
   end
@@ -73,12 +76,12 @@ class App
   def create_rental
     print 'Select a book: '
     list_all_books
-    input1 = gets.chomp
+    input1 = gets.chomp.to_i
     print 'Select a person: '
     list_all_person
     input2 = gets.chomp.to_i
     print "\n Date(yyyy/mm/dd): "
-    gets.chomp
+    date = gets.chomp.to_i
     rental = Rental.new(date, @person[input2], @book_list[input1])
     @rentals.push(rental)
     puts 'Rental created successfully '
@@ -89,6 +92,10 @@ class App
     @book_list.each_with_index do |item, index|
       puts "#{index} Title: \"#{item.title}\", Author: #{item.author}"
     end
+  end
+
+  def make_books
+    list_all_books
     puts 'Press enter to continue.'
     gets.chomp
     menu_run
@@ -98,6 +105,10 @@ class App
     @person.each_with_index do |item, index|
       puts "#{index} Name: #{item.name} Age: #{item.age} ID: #{item.id}"
     end
+  end
+
+  def make_persons
+    list_all_person
     puts 'Press enter to continue.'
     gets.chomp
     menu_run
@@ -117,5 +128,20 @@ class App
       student = Student.new(age, name, permission: true)
     end
     @person.push(student)
+  end
+
+  def list_all_rentals_for_a_given_person_id
+    puts 'Please enter a person id: '
+    userid = gets.chomp.to_i
+    rent = @rentals.select do |rents|
+      rents.person.id == userid
+    end
+    if rent.empty?
+      puts 'No rental found for this person ID'
+    else
+      rent.each do |item|
+        puts "Date: #{item.date}, Book:\"#{item.book.title}\" by #{item.book.author}"
+      end
+    end
   end
 end
