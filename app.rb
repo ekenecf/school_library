@@ -28,9 +28,9 @@ class App
     choice = menu.to_s
     case choice
     when '1'
-      list_all_books
+      make_books
     when '2'
-      list_all_person
+      make_persons
     when '3'
       create_person
     when '4'
@@ -101,14 +101,14 @@ class App
     menu_run
   end
 
-  def list_all_person
+  def list_all_people
     @person.each_with_index do |item, index|
       puts "#{index} Name: #{item.name} Age: #{item.age} ID: #{item.id}"
     end
   end
 
   def make_persons
-    list_all_person
+    list_all_people
     puts 'Press enter to continue.'
     gets.chomp
     menu_run
