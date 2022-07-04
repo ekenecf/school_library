@@ -20,4 +20,3 @@ class Student < Person
     classroom.add_student(self) unless classroom.student.include?(self)
   end
 end
-
