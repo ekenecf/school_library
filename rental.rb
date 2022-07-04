@@ -6,8 +6,6 @@ class Rental
   attr_reader :book, :person
 
   def initialize(date, person, book)
-    @rentals = []
-
     @date = date
 
     @person = person

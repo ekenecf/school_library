@@ -16,4 +16,4 @@ base.correct_name
 
 person1 = Person.new('ekene', 23)
 book = Book.new('biology', 'collins')
-book.add_rental(person1, '2022/03/03', book)
+p book.add_rental(person1, '2022/03/03', book)
