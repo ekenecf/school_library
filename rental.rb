@@ -6,6 +6,7 @@ class Rental
 
   def initialize(date, person, book)
     @rentals = []
+
     @date = date
 
     @person = person
