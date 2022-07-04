@@ -130,6 +130,24 @@ class App
     @person.push(student)
   end
 
+  def create_teacher
+    puts 'enter name: '
+    name = gets.chomp
+    puts 'enter specialization: '
+    specialization = gets.chomp
+    puts 'enter age: '
+    age = gets.chomp
+    puts "'Has parent permission? [Y/N]: '"
+    permission = gets.chomp
+    if permission == 'N'
+      teacher = Teacher.new(age, specialization, name, parent_permission: false)
+      @person.push(teacher)
+    else
+      teacher = Teacher.new(age, specialization, name, parent_permission: true)
+    end
+    @person.push(teacher)
+  end
+
   def list_all_rentals_for_a_given_person_id
     puts 'Please enter a person id: '
     userid = gets.chomp.to_i
