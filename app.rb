@@ -28,9 +28,9 @@ class App
     choice = menu.to_s
     case choice
     when '1'
-      make_books
+      list_books
     when '2'
-      make_persons
+      list_persons
     when '3'
       create_person
     when '4'
@@ -78,7 +78,7 @@ class App
     list_all_books
     input1 = gets.chomp.to_i
     print 'Select a person: '
-    list_all_person
+    list_all_people
     input2 = gets.chomp.to_i
     print "\n Date(yyyy/mm/dd): "
     date = gets.chomp.to_i
@@ -94,7 +94,7 @@ class App
     end
   end
 
-  def make_books
+  def list_books
     list_all_books
     puts 'Press enter to continue.'
     gets.chomp
@@ -107,7 +107,7 @@ class App
     end
   end
 
-  def make_persons
+  def list_persons
     list_all_people
     puts 'Press enter to continue.'
     gets.chomp
@@ -161,5 +161,6 @@ class App
         puts "Date: #{item.date}, Book:\"#{item.book.title}\" by #{item.book.author}"
       end
     end
+    menu_run
   end
 end

@@ -20,6 +20,3 @@ class Student < Person
     classroom.add_student(self) unless classroom.student.include?(self)
   end
 end
-
-# p student1 = Student.new(23, 'basic 2', 'ekene')
-# student1.classroom
