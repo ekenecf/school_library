@@ -158,7 +158,7 @@ class App
       puts 'No rental found for this person ID'
     else
       rent.each do |item|
-        puts "Date: #{item.date}, Book:\"#{item.book.title}\" by #{item.book.author}"
+        puts "Date: #{item.date} Book:\"#{item.book.title}\" by #{item.book.author}"
       end
     end
     menu_run
