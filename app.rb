@@ -5,7 +5,7 @@ require_relative './person'
 require_relative './rental'
 require_relative './display'
 require_relative './list_functions'
-require_relative './create_book_rental.rb'
+require_relative './create_book_rental'
 require_relative 'create_person'
 
 class App
