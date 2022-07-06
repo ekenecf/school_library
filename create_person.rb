@@ -30,7 +30,7 @@ def create_student
     student = Student.new(name, classroom, age, parent_permission: false)
     @person.push(student)
   else
-    student = Student.new(name, classroom, age, parent_permission: false)
+    student = Student.new(name, classroom, age, parent_permission: true)
   end
   @person.push(student)
 end
