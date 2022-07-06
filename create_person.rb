@@ -19,16 +19,18 @@ end
 
 def create_student
   puts 'Enter age: '
-  age = gets.chomp
+  age = gets.chomp.to_i
   puts 'Enter name: '
   name = gets.chomp
   puts "'Has parent permission? [Y/N]: '"
   permission = gets.chomp
+  puts 'enter classroom :'
+  classroom = gets.chomp
   if permission == 'N'
-    student = Student.new(age, name, parent_permission: false)
+    student = Student.new(name, classroom, age, parent_permission: false)
     @person.push(student)
   else
-    student = Student.new(age, name, parent_permission: true)
+    student = Student.new(name, classroom, age, parent_permission: false)
   end
   @person.push(student)
 end
@@ -39,7 +41,7 @@ def create_teacher
   puts 'enter specialization: '
   specialization = gets.chomp
   puts 'enter age: '
-  age = gets.chomp
+  age = gets.chomp.to_i
   puts "'Has parent permission? [Y/N]: '"
   permission = gets.chomp
   if permission == 'N'

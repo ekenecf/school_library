@@ -15,10 +15,6 @@ class App
     @person = []
   end
 
-  def menu
-    menudisplay
-  end
-
   def menu_run
     menu_run_display
   end

@@ -12,8 +12,7 @@ def menudisplay
 end
 
 def menu_run_display
-  choice = menu.to_s
-  case choice
+  case menudisplay
   when '1'
     list_books
   when '2'
