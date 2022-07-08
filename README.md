@@ -21,7 +21,7 @@ Setup
 - Run bundle install
 - Run rubocop
 
-## Author
+## Authors
 
 👤 **Nwachukwu Ekene**
 
