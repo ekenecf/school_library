@@ -1,4 +1,6 @@
 require_relative './list_functions'
+require_relative './preserve_student'
+require_relative './preserve_teacher'
 
 def create_person
   print "\n Do you want to create a student (1) or a teacher (2)? [Input the number]: "
@@ -28,11 +30,13 @@ def create_student
   classroom = gets.chomp
   if permission == 'N'
     student = Student.new(name, classroom, age, parent_permission: false)
-    @person.push(student)
+    @person.push(student) unless @person.include?(student)
+    # preservecreatestudent(@person)
   else
     student = Student.new(name, classroom, age, parent_permission: true)
   end
-  @person.push(student)
+  @person.push(student) unless @person.include?(student)
+  # preservecreatestudent(@person)
 end
 
 def create_teacher
@@ -47,8 +51,10 @@ def create_teacher
   if permission == 'N'
     teacher = Teacher.new(age, specialization, name, parent_permission: false)
     @person.push(teacher)
+    preservecreateteacher(@person)
   else
     teacher = Teacher.new(age, specialization, name, parent_permission: true)
   end
   @person.push(teacher)
+  preservecreateteacher(@person)
 end

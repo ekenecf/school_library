@@ -27,6 +27,7 @@ def menu_run_display
     list_all_rentals_for_a_given_person_id
   else
     puts 'Thank you for using this App'
+    preservecreatestudent(@person)
     exit
   end
 end
