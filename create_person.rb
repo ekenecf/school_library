@@ -30,8 +30,8 @@ def create_student
   classroom = gets.chomp
   if permission == 'N'
     student = Student.new(name, classroom, age, parent_permission: false)
+    # preservecreatestudent(student)
     @person.push(student) unless @person.include?(student)
-    # preservecreatestudent(@person)
   else
     student = Student.new(name, classroom, age, parent_permission: true)
   end
