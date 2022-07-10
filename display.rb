@@ -27,9 +27,24 @@ def menu_run_display
     list_all_rentals_for_a_given_person_id
   else
     puts 'Thank you for using this App'
-    @person.map { |student| preservecreatestudent(student) }
-    @person.map { |teacher| preservecreateteacher(teacher) }
-    @book_list.map { |book| preservecreatebook(book) }
+    pre_s
+    pre_t
+    pre_book
+    # @person.map { |student| preservecreatestudent(student) }
+    # @person.map { |teacher| preservecreateteacher(teacher) }
+    # @book_list.map { |book| preservecreatebook(book) }
     exit
   end
+end
+
+def pre_s
+  @person.map { |student| preservecreatestudent(student) }
+end
+
+def pre_t
+  @person.map { |teacher| preservecreateteacher(teacher) }
+end
+
+def pre_book
+  @book_list.map { |book| preservecreatebook(book) }
 end
