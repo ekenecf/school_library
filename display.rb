@@ -27,8 +27,9 @@ def menu_run_display
     list_all_rentals_for_a_given_person_id
   else
     puts 'Thank you for using this App'
-    @person.map { |person|  preservecreatestudent(person)  }
-    # preservecreatestudent(@person)
+    @person.map { |student| preservecreatestudent(student) }
+    @person.map { |teacher| preservecreateteacher(teacher) }
+    @book_list.map { |book| preservecreatebook(book) }
     exit
   end
 end

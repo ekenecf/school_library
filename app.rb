@@ -9,6 +9,7 @@ require_relative 'create_person'
 
 class App
   attr_accessor :book_list, :rentals, :person
+
   def initialize()
     @book_list = []
     @rentals = []

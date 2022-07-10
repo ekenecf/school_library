@@ -9,7 +9,7 @@ def create_book
   input2 = gets.chomp
   book = Book.new(input1, input2)
   @book_list.push(book)
-  preservecreatebook(@book_list)
+  # preservecreatebook(@book_list)
   puts 'Book created successfully '
   menu_run
 end
@@ -25,7 +25,7 @@ def create_rental
   date = gets.chomp
   rental = Rental.new(date, @person[input2], @book_list[input1])
   @rentals.push(rental)
-  preservecreaterental(@rentals)
+  # preservecreaterental(@rentals)
   puts 'Rental created successfully '
   menu_run
 end
