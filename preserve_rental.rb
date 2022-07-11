@@ -1,7 +1,9 @@
 require 'json'
 
 def preservecreaterental(preserverental)
-  rental_json_obj = {  Renter_name: preserverental.person.name, Renter_age:preserverental.person.age, Rented_book:preserverental.book.title, Rented_book_author:preserverental.book.author, Rent_date: preserverental.date }
+  rental_json_obj = { Renter_name: preserverental.person.name, Renter_age: preserverental.person.age,
+                      Rented_book: preserverental.book.title, Rented_book_author: preserverental.book.author,
+                      Rent_date: preserverental.date }
   get_rented_array = []
 
   if File.empty?('rental.json')
