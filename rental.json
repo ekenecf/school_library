@@ -1,1 +1,16 @@
-[{"Rent_Date":"2018/09/09","Person_name":"qwa","book_rented":"wert","rented_by":"mmmm"}]
+[
+  {
+    "Renter_name": "lwjbbvwd",
+    "Renter_age": 33,
+    "Rented_book": "colling",
+    "Rented_book_author": "meeeee",
+    "Rent_date": "2020/09/09"
+  },
+  {
+    "Renter_name": "rttyuuiiop",
+    "Renter_age": 23,
+    "Rented_book": "witch",
+    "Rented_book_author": "ekene",
+    "Rent_date": "2020/06/13"
+  }
+]

@@ -1,7 +1,6 @@
 require 'json'
 
 def preservecreateteacher(preserveteacher)
-  p preserveteacher
   teacher_json_obj = { Teacher_age: preserveteacher.name, Teacher_name: preserveteacher.age.to_s }
 
   get_teacher_array = []

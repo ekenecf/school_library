@@ -30,11 +30,11 @@ def create_student
   classroom = gets.chomp
   if permission == 'N'
     student = Student.new(name, classroom, age, parent_permission: false)
-    @person.push(student) unless @person.include?(student)
+    @person << student unless @person.include?(student)
   else
     student = Student.new(name, classroom, age, parent_permission: true)
   end
-  @person.push(student) unless @person.include?(student)
+  @person << student unless @person.include?(student)
 end
 
 def create_teacher
@@ -48,9 +48,9 @@ def create_teacher
   permission = gets.chomp
   if permission == 'N'
     teacher = Teacher.new(age, specialization, name, parent_permission: false)
-    @person.push(teacher)
+    @person << teacher
   else
     teacher = Teacher.new(age, specialization, name, parent_permission: true)
   end
-  @person.push(teacher)
+  @person << teacher
 end
