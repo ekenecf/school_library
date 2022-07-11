@@ -5,7 +5,7 @@ require_relative './preserve_student'
 require_relative './preserve_teacher'
 
 def main
-  # read_saved_data
+  read_saved_data
   read_saved_book
   read_saved_student
   read_saved_teacher

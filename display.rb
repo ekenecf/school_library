@@ -30,11 +30,13 @@ def menu_run_display
     pre_s
     pre_t
     pre_book
-    # @person.map { |student| preservecreatestudent(student) }
-    # @person.map { |teacher| preservecreateteacher(teacher) }
-    # @book_list.map { |book| preservecreatebook(book) }
+    pre_rent
     exit
   end
+end
+
+def pre_rent
+  @rentals.map { |rent| preservecreaterental(rent) }
 end
 
 def pre_s

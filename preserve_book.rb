@@ -1,7 +1,6 @@
 require 'json'
 
 def preservecreatebook(preservebook)
-  p preservebook
   book_json_obj = { Book_title: preservebook.title.to_s, Book_author: preservebook.author }
 
   get_book_array = []
