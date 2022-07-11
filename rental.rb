@@ -9,10 +9,8 @@ class Rental
     @date = date
 
     @person = person
-    @person.rentals << self unless @person.rentals.include?(self)
 
     @book = book
-    @book.rentals << self unless @person.rentals.include?(self)
   end
 
   def person=(person)
