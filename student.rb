@@ -8,7 +8,6 @@ class Student < Person
     super(name, age, parent_permission: parent_permission)
     @classroom = classroom
     @parent_permission = parent_permission
-    # @student = []
   end
 
   def play_hooky

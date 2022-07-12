@@ -8,7 +8,7 @@ def create_book
   print 'Author: '
   input2 = gets.chomp
   book = Book.new(input1, input2)
-  @book_list.push(book)
+  @book_list << book
   puts 'Book created successfully '
   menu_run
 end
@@ -23,7 +23,7 @@ def create_rental
   print "\n Date(yyyy/mm/dd): "
   date = gets.chomp
   rental = Rental.new(date, @person[input2], @book_list[input1])
-  @rentals.push(rental)
+  @rentals << rental
   puts 'Rental created successfully '
   menu_run
 end
