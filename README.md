@@ -27,6 +27,7 @@ Setup
 
 - GitHub: [@ekenecf](https://github.com/ekenecf)
 - LinkedIn: [Nwachukwu Ekene](https://www.linkedin.com/in/nwachukwuekene/)
+- Twitter: [Nwachukwu Ekene](https://twitter.com/ekene070)
 
 ## 🤝 Contributing
 
